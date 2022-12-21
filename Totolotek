@@ -5,6 +5,7 @@
 		program zwraca ilość "trafień"
 """
 
+
 #zaszyć generator licz losowych z przedzialu 1-49
 #nie wyswietlaj ich uzytkownikowi
 #petla ktora poprosi o prowadzenie 6 typow
@@ -16,26 +17,24 @@
 import random
 lista1 = []
 liczba_losowa = random.sample(range(1,49),6)
+
 lista1.append(liczba_losowa)
 print(lista1)
+
 
 lista2 = []
 i = 0
 while i < len(liczba_losowa):
     strzal = int(input("Podaj swoją liczbę"))
+    if strzal <= 0 or strzal > 49:
+        print("Poza zakresem. Podaj liczbę od 1 do 49") #strzały z poza zakresu wciąż traktuje jako podane liczby
+        continue
     if strzal not in lista2:
         lista2.append(strzal)
-        print("To Twój", i+1, "strzał")
+        print("To Twój", i+1, "strzał") #jak te dwie linijki przesunąłem maksymalnie w lewo to pętla wciąż pytała o liczbę
         i += 1
+
 print("Twoje strzały to", lista2)
 
-trafienia = Counter(lista2) # <------------ MAM BLOKADĘ W TYM MIEJSCU
-if trafienia:
-    print("Ilość trafień", len(trafienia))
-else:
-    print("Nie trafiłeś ani jednej liczby. Spróbuj ponownie")
-
-
-
-#Trzeba porównać teraz ze sobą dwie listy o ile jest taka możliwość.
-
+liczba_trafien = [elem for elem in liczba_losowa if elem in lista2]
+print(liczba_trafien)
