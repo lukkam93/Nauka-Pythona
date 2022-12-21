@@ -38,3 +38,11 @@ print("Twoje strzały to", lista2)
 
 liczba_trafien = [elem for elem in liczba_losowa if elem in lista2]
 print(liczba_trafien)
+
+#range 49 nigdy nie wygenruje liczby 49
+#jak zrobie zwykly random to liczby moga sie powtorzyc. jak random.sample to nie. 
+#linia 21 z dupy
+#dodaj elsa aby uzytkownik wiedzial ze podal liczbe ktora napisal juz wczesniej
+#inaczej zrobic info o ilosci trafien - uzyj for i in lista2:
+#if i in liczba_losowa
+#append
