@@ -1,0 +1,34 @@
+"""
+kalkulator wag
+program przechowuje dane w postaci tablicy dwuwymiarowej
+program prosi o użytkownika o podanie dnia i wagi w danym dniu
+po zakończeniu wprowadzania danych (na życzenie używkonika) program wyświetla statystyki
+średnia, najwyższa i najniższa waga w każdym miesiącu (jeżeli brak danych dla konkretnego miesiąca to informacja o tym)
+średnia, najniższa, najwyższa waga w roku
+"""
+
+
+lista_dni = []
+lista_wag = []
+
+dni = int(input("Podaj dzień"))
+lista_dni.append(dni)
+waga = int(input("Podaj wagę tego dnia"))
+lista_wag.append(waga)
+
+while True:
+    kontynuacja = str(input("Chcesz podać kolejne dane? Y/N"))
+    if kontynuacja =="Y":
+        dni = int(input("Podaj dzień"))
+        lista_dni.append(dni)
+        waga = int(input("Podaj wagę tego dnia"))
+        lista_wag.append([waga])
+
+    if kontynuacja == "N":
+        break
+#print("Dnia {}, ważyłeś {}".format(lista_dni, lista_wag))
+#print("Dni",lista_dni)
+#print("Wagi", lista_wag)
+
+wspolna_lista = lista_dni, lista_wag
+print(wspolna_lista)
