@@ -32,3 +32,29 @@ while True:
 
 wspolna_lista = lista_dni, lista_wag
 print(wspolna_lista)
+
+"""
+
+
+lista = [[0 for j in range(31)] for i in range(12)]
+
+# uzytkownik podaje miesiac, dzien, wage
+
+miesiac = int(input("panie user podaj miesiac"))
+dzien = int(input("panie user podaj dzien"))
+waga = float(input("panie user podaj waga"))
+
+lista[miesiac-1][dzien-1] = waga
+
+
+
+# koniec wprowadzania
+
+for miesiac in lista:
+    sum = 0
+    for dzien in miesiac:
+        #dzien = waga w konkretnym dniu
+        sum += dzien
+    # sume wag w danym miesiacu
+
+"""
