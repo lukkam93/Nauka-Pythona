@@ -38,3 +38,6 @@ def ilosc_dni(rok, miesiac):
             print("Ten miesiac ma 30 dni")
 
 ilosc_dni(2020, 12)
+
+
+#trzecia czesc zadania
