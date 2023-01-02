@@ -11,13 +11,11 @@ def silnia_funkcja(liczba):
 
 silnia_funkcja(10)
 
-################################
-# wersja rekurencyjna
 
 def silnia_rekurencja(liczba):
-    if liczba == 1:
+    if liczba <= 1:
         return 1
     else:
         return liczba * silnia_rekurencja(liczba - 1)
-    
-silnia_rekurencja(6)
+
+print(silnia_rekurencja(10))
