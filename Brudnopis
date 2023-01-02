@@ -7,9 +7,6 @@
 		średnia, najniższa, najwyższa waga w roku
 """
 
-#po zakonczeniu sortowanie lub min/max
-#nie ma sredniej - trzeba bedzie ja obliczyc zliczajac wszystkie elementy i dzielac przez len()
-
 kalendarz = [[0 for j in range(31)] for i in range(12)]
 
 while True:
