@@ -11,6 +11,7 @@ def silnia_funkcja(liczba):
 
 silnia_funkcja(10)
 
+##################################
 
 def silnia_rekurencja(liczba):
     if liczba <= 1:
