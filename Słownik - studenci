@@ -8,7 +8,8 @@ po zakończeniu wprowadzania danych zwraca średnią ocen dla każdego studenta 
 
 #WORK IN PROGRESS
 
-"""oceny_studentow = {}
+"""
+oceny_studentow = {}
 
 while True:
     imie = str(input("Wprowadź imię studenta"))
@@ -20,7 +21,7 @@ while True:
     if pytanie == "N" or pytanie == "n":
         break
 print("Dzięki")
-
+"""
 
 #BRUDNOPIS
 """
