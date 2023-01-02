@@ -10,19 +10,19 @@ po zakończeniu wprowadzania danych zwraca średnią ocen dla każdego studenta 
 
 """oceny_studentow = {}
 
-def petla():
-    while True:
-        imie = str(input("Wprowadź imię studenta"))
-        oceny = int(input("Jakie oceny uzyskał student?"))
-        oceny_studentow[imie] = oceny
-        print(oceny_studentow)
-        print(type(oceny))
-        pytanie = str(input("Chcesz dalej wprowadzać dane? Y/N"))
-        if pytanie == "N" or pytanie == "n":
-            break
-    print("Dzięki")
+while True:
+    imie = str(input("Wprowadź imię studenta"))
+    oceny = int(input("Jakie oceny uzyskał student?"))
+    oceny_studentow[imie] = oceny
+    print(oceny_studentow)
+    print(type(oceny))
+    pytanie = str(input("Chcesz dalej wprowadzać dane? Y/N"))
+    if pytanie == "N" or pytanie == "n":
+        break
+print("Dzięki")
 
-petla()
+
+#BRUDNOPIS
 """
 #do jednego ucznia mozna przypisac wiecej ocen, dlatego trzeba to uwzglednic w petli
 #jak przypisac wiele wartosci do jednego klucza w slowniku? lista?
