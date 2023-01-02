@@ -1,0 +1,15 @@
+"""
+# zadanie 3:
+# napisz funkcję obliczającą silnie, funkcja przyjmuje liczbę całkowitą i oblicza silnię dla niej + wersja rekurencyjna
+"""
+
+def silnia_funkcja(liczba):
+    silnia = 1
+    for x in range(2, liczba + 1):
+        silnia *= x
+    print(silnia)
+
+silnia_funkcja(10)
+
+################################
+# wersja rekurencyjna
