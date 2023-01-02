@@ -25,7 +25,7 @@ print("Dzięki")
 #BRUDNOPIS
 """
 #do jednego ucznia mozna przypisac wiecej ocen, dlatego trzeba to uwzglednic w petli
-#jak przypisac wiele wartosci do jednego klucza w slowniku? lista?
+#jak przypisac wiele wartosci do jednego klucza w slowniku? lista! tylko jeszcze wykombinowac jak to zrobic i bedzie dobrze
 """
 oceny_studentow = {}
 x = str(input("Podaj imię"))
