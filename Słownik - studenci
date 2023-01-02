@@ -1,0 +1,36 @@
+"""
+zadanie 5:
+# napisz program który poprosi o wprowadzenie imienia studenta oraz oceny jaką uzyskał,
+"x" kończy wprowadzanie danych,
+po zakończeniu wprowadzania danych zwraca średnią ocen dla każdego studenta oraz dla całej klasy
+[słowniki do wykorzystania]
+"""
+
+#WORK IN PROGRESS
+
+"""oceny_studentow = {}
+
+def petla():
+    while True:
+        imie = str(input("Wprowadź imię studenta"))
+        oceny = int(input("Jakie oceny uzyskał student?"))
+        oceny_studentow[imie] = oceny
+        print(oceny_studentow)
+        print(type(oceny))
+        pytanie = str(input("Chcesz dalej wprowadzać dane? Y/N"))
+        if pytanie == "N" or pytanie == "n":
+            break
+    print("Dzięki")
+
+petla()
+"""
+#do jednego ucznia mozna przypisac wiecej ocen, dlatego trzeba to uwzglednic w petli
+#jak przypisac wiele wartosci do jednego klucza w slowniku? lista?
+"""
+oceny_studentow = {}
+x = str(input("Podaj imię"))
+y = int(input("Podaj oceny"))
+oceny_studentow["Imie"] = x
+oceny_studentow["Oceny"] = [y]
+print(oceny_studentow)
+print(type(y))"""
