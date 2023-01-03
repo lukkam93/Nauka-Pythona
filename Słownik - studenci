@@ -9,18 +9,28 @@ po zakończeniu wprowadzania danych zwraca średnią ocen dla każdego studenta 
 #WORK IN PROGRESS
 
 """
-oceny_studentow = {}
-
-while True:
+def oceny_studenta():
+    lista_ocen = []
+    lista_list = [lista_ocen] #nie wejde w tym niepotrzebnie w tablice 2-wymiarowa?
     imie = str(input("Wprowadź imię studenta"))
-    oceny = int(input("Jakie oceny uzyskał student?"))
-    oceny_studentow[imie] = oceny
-    print(oceny_studentow)
-    print(type(oceny))
-    pytanie = str(input("Chcesz dalej wprowadzać dane? Y/N"))
-    if pytanie == "N" or pytanie == "n":
-        break
-print("Dzięki")
+    while True:
+        oceny = int(input("Jakie oceny uzyskał student?"))
+        lista_ocen.append(oceny)
+        print(lista_ocen)
+        ucznowie_oceny[imie] = oceny
+        print(ucznowie_oceny)
+        pytanie = str(input("Chcesz dalej wprowadzać oceny? Y/N"))
+        print(lista_list)
+        if pytanie == "N" or pytanie == "n":
+            pytanie2 = str(input("Kolejny uczeń? Y/N"))
+            if pytanie2 == "Y" or pytanie2 == "y":
+                oceny_studenta()
+            else:
+                break
+    print("Dzięki")
+
+ucznowie_oceny = {}
+oceny_studenta()
 """
 
 #BRUDNOPIS
