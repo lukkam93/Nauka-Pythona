@@ -6,42 +6,26 @@ po zakończeniu wprowadzania danych zwraca średnią ocen dla każdego studenta 
 [słowniki do wykorzystania]
 """
 
-#WORK IN PROGRESS
+slownik = {}
 
-"""
-def oceny_studenta():
+while True:
     lista_ocen = []
-    lista_list = [lista_ocen] #nie wejde w tym niepotrzebnie w tablice 2-wymiarowa?
-    imie = str(input("Wprowadź imię studenta"))
+    imie = str(input("Podaj imie. [Wpisanie \"X\" spowouje zamknięcie aplikacji] "))
+    if imie == "x" or imie == "X":
+        break
     while True:
-        oceny = int(input("Jakie oceny uzyskał student?"))
-        lista_ocen.append(oceny)
-        print(lista_ocen)
-        ucznowie_oceny[imie] = oceny
-        print(ucznowie_oceny)
-        pytanie = str(input("Chcesz dalej wprowadzać oceny? Y/N"))
-        print(lista_list)
-        if pytanie == "N" or pytanie == "n":
-            pytanie2 = str(input("Kolejny uczeń? Y/N"))
-            if pytanie2 == "Y" or pytanie2 == "y":
-                oceny_studenta()
-            else:
-                break
-    print("Dzięki")
+        ocena = input("Podaj ocene. [Wpisanie \"X\" spowouje cofnięcie do wprowadzenia imienia ucznia] ")
+        if ocena == "x" or ocena == "X":
+            break
+        lista_ocen.append(int(ocena))
+        slownik[imie] = lista_ocen
 
-ucznowie_oceny = {}
-oceny_studenta()
-"""
+srednia_klasy = []
+for k,v in slownik.items():
+    srednia_ucznia = sum(v) / len(v)
+    print("Imię ucznia:", k,"\nŚrednia ucznia: ", srednia_ucznia)
+    srednia_klasy.append(srednia_ucznia)
 
-#BRUDNOPIS
-"""
-#do jednego ucznia mozna przypisac wiecej ocen, dlatego trzeba to uwzglednic w petli
-#jak przypisac wiele wartosci do jednego klucza w slowniku? lista! tylko jeszcze wykombinowac jak to zrobic i bedzie dobrze
-"""
-oceny_studentow = {}
-x = str(input("Podaj imię"))
-y = int(input("Podaj oceny"))
-oceny_studentow["Imie"] = x
-oceny_studentow["Oceny"] = [y]
-print(oceny_studentow)
-print(type(y))"""
+print("Średnia klasy: {}".format(sum(srednia_klasy) / len(srednia_klasy)))
+
+print("Dziękujemy za skorzystanie z aplikacji")
